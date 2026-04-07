@@ -24,3 +24,17 @@ access via
 localhost:3000
 ```
 
+## Running the stack
+
+I use podman to run the stack. You can use docker or docker-compose. The commands are the same. Just replace `podman` with `docker` or `docker-compose`.
+
+Use compose.yaml to run the whole stack:
+```
+podman compose up
+```
+and code generator:
+```
+podman compose --profile tools up -d codegen
+podman compose exec codegen bash
+```
+Replace `bash` with the specific command you want to run.
